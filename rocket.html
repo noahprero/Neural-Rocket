@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocket</title>
+    <link rel="stylesheet" href="css/rocket.css">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <div id="instructions">
+        <div id="control-instructions">Press A and D to <br> activate thrusters</div>
+        <div id="reset-instructions">Press R to reset position</div>
+        <div id="hide-menu">Press M to toggle menu</div>
+    </div>
+
+    <div id="coordinates"></div>
+    
+    <div id="menu">
+        <div class="menu-item">
+            <label for="body-height">Body height:
+                <p class="value-label"></p>
+            </label>
+            <input type="range", id="body-height" name="body-height" min="2" max="200" value="30">
+        </div>
+        <div class="menu-item">
+            <label for="body-width">Body width:
+                <p class="value-label"></p>
+            </label>
+            <input type="range", id="body-width" name="body-width" min="2" max="200" value="30">
+        </div>
+        <div class="menu-item">
+            <label for="thruster-height">Thruster height:
+                <p class="value-label"></p>
+            </label>
+            <input type="range", id="thruster-height" name="thruster-height" min="2" max="50" value="10">
+        </div>
+        <div class="menu-item">
+            <label for="thruster-width">Thruster width:
+                <p class="value-label"></p>
+            </label>
+            <input type="range", id="thruster-width" name="thruster-width" min="2" max="50" value="10">
+        </div>
+        <div class="menu-item">
+            <label for="mass">Mass:
+                <p class="value-label"></p>
+            </label>
+            <input type="range", id="mass" name="mass" min="0.01" max="10" value="2" step="0.01">
+        </div>
+        <div class="menu-item">
+            <label for="left-thruster-strength">Left thruster strength:
+                <p class="value-label"></p>
+            </label>
+            <input type="range", id="left-thruster-strength" name="left-thruster-strength" min="0.01" max="5" value="1" step="0.01">
+        </div>
+        <div class="menu-item">
+            <label for="right-thruster-strength">Right thruster strength:
+                <p class="value-label"></p>
+            </label>
+            <input type="range", id="right-thruster-strength" name="right-thruster-strength" min="0.01" max="5" value="1" step="0.01">
+        </div>
+        <div class="menu-item">
+            <label for="rotation_dampener">Rotation dampener:
+                <p class="value-label"></p>
+            </label>
+            <input type="range", id="rotation_dampener" name="rotation_dampener" min="1" max="50" value="1" step="0.1">
+        </div>
+        <div class="menu-item">
+            <label for="gravity-strength">Gravity strength:
+                <p class="value-label"></p>
+            </label>
+            <input type="range", id="gravity-strength" name="gravity-strength" min="0" max="1" value="0.07" step="0.01">
+        </div>
+    </div>
+
+    <script src="js/Vector2D.js"></script>
+    <script src="js/rocket.js"></script>
+</body>
+</html>
