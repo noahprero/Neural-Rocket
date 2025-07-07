@@ -54,8 +54,12 @@ class Vector2D {
     }
 
     setMag(new_mag) {
-        this.x = this.x * new_mag / this.mag();
-        this.y = this.y * new_mag / this.mag();
+        const m = this.mag();
+        if (m !== 0) {
+            const scale = new_mag / m;
+            this.x *= scale;
+            this.y *= scale;
+        }
         return this;
     }
 
@@ -72,8 +76,11 @@ class Vector2D {
     }
 
     normalize() {
-        this.x /= this.mag();
-        this.y /= this.mag();
+        const m = this.mag();
+        if (m !== 0) {
+            this.x /= m;
+            this.y /= m;
+        }
         return this;
     }
 
